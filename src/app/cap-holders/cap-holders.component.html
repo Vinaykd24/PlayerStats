@@ -1,0 +1,79 @@
+<div class="capHolders">
+  <div class="col-md-12">
+    <h1>Leader Board</h1>
+  </div>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="row">
+      <div class="col-md-4 purpleCarHolder">
+        <h1>Purple Cap Holder</h1>
+        <div class="col-md-12 capWrapper">	
+          <div class="row capPlayer" *ngFor = "let item of players | purpleCap; let i = index">
+              <!--<div class="pull-left" *ngIf = "i == 0">-->
+              <div class="col-md-3 nopadding">
+                <img src="assets/images/{{item.photo}}">
+              </div>
+              <div class="col-md-7 nopadding contentWrap">
+                <h2>{{item.pname}}</h2>
+                <ul>
+                  <li>
+                    <span>Matches</span>
+                    <p>{{item.matches}}</p>
+                  </li>
+                  <li>
+                    <span>Wickets</span>
+                    <p>{{item.wickets}}</p>
+                  </li>
+                </ul>
+              </div><!-- div.contentWrap Ends -->
+          </div><!-- div.capPlayer Ends -->
+        </div><!-- div.capWrapper Ends -->
+      </div><!-- div.purpleCarHolder Ends -->
+      <div class="col-md-4 orangeCarHolder">
+        <h1>Orange Cap Holder</h1>
+        <div class="col-md-12 capWrapper">	
+          <div class="row capPlayer" *ngFor="let item of players | orangeCap">
+              <div class="col-md-3 nopadding">
+                <img src="assets/images/{{item.photo}}">
+              </div>
+              <div class="col-md-7 nopadding contentWrap">
+                <h2>{{item.pname}}</h2>
+                <ul>
+                  <li>
+                    <span>Matches</span>
+                    <p>{{item.matches}}</p>
+                  </li>
+                  <li>
+                    <span>Runs</span>
+                    <p>{{item.runScored}}</p>
+                  </li>
+                </ul>
+              </div><!-- div.contentWrap Ends -->
+          </div><!-- div.capPlayer Ends -->
+        </div><!-- div.capWrapper Ends -->
+      </div><!-- div.orangeCarHolder Ends -->
+      <div class="col-md-4 greenCarHolder">
+        <h1>Green Cap Holder</h1>
+        <div class="col-md-12 capWrapper">	
+          <div class="row capPlayer" *ngFor="let item of players | greenCap">
+              <div class="col-md-3 nopadding">
+                <img src="assets/images/{{item.photo}}">
+              </div>
+              <div class="col-md-7 nopadding contentWrap">
+                <h2>{{item.pname}}</h2>
+                <ul>
+                  <li>
+                    <span>Matches</span>
+                    <p>{{item.matches}}</p>
+                  </li>
+                  <li>
+                    <span>MoM</span>
+                    <p>{{item.MOM}}</p>
+                  </li>
+                </ul>
+              </div><!-- div.contentWrap Ends -->
+          </div><!-- div.capPlayer Ends -->
+        </div><!-- div.capWrapper Ends -->
+      </div><!-- div.greenCarHolder Ends -->
+    </div><!-- div.row Ends -->
+  </div><!-- div.col-md-10.col-md-offset-2 Ends -->
+</div><!-- div.capHolders Ends -->

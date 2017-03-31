@@ -1,0 +1,81 @@
+<div class="container-fluid playerDetailWrapper">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 playerDetails">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Player Profile</h1>
+        </div><!--div.col-md-12 Ends -->
+      </div><!--div.row Ends -->
+      <div class="row">
+        <div class="col-md-3">
+          <img class="img-responsive" src="assets/images/{{playerData.photo}}" alt="">
+        </div><!--div.col-lg-3 Ends -->
+        <div class="col-md-9">
+          <h3>{{playerData.pname}}</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        </div><!--div.col-lg-9 Ends -->
+      </div><!--div.row Ends -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="records">
+            <h2>Career Stats</h2>
+            <h3>Batting</h3>
+            <div class="battingWrap">
+              <div class="col-md-2">
+                <span>Matches</span>
+                <strong>{{playerData.matches}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>Runs</span>
+                <strong>{{playerData.runScored}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>Innings</span>
+                <strong>{{playerData.inn}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>Average</span>
+                <strong>{{(playerData.runScored/playerData.inn) | number:'2.1-2'}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>100s</span>
+                <strong>1</strong>
+              </div>
+              <div class="col-md-2">
+                <span>50s</span>
+                <strong>1</strong>
+              </div>
+            </div><!--div.battingWrap -->
+            <h3>Bowling</h3>
+            <div class="bowlingWrap">
+              <div class="col-md-2">
+                <span>Wickets</span>
+                <strong>{{playerData.wickets}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>Average</span>
+                <strong>{{(playerData.runsGiven/playerData.wickets) | number:'2.1-2'}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>Economy</span>
+                <strong>{{(playerData.runsGiven/playerData.overs) | number:'2.1-2'}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>Average</span>
+                <strong>{{(playerData.overs*6/playerData.wickets) | number:'2.1-2'}}</strong>
+              </div>
+              <div class="col-md-2">
+                <span>3W</span>
+                <strong>1</strong>
+              </div>
+              <div class="col-md-2">
+                <span>5W</span>
+                <strong>1</strong>
+              </div>
+            </div><!--div.bowlingWrap -->
+        </div><!--div.records Ends -->
+        </div><!--div.col-lg-12 Ends -->
+      </div><!--div.row Ends -->
+    </div>
+  </div><!--div.row Ends-->
+</div><!--container Ends -->

@@ -1,0 +1,19 @@
+ @import url('https://fonts.googleapis.com/css?family=Adamina');
+ @import url('https://fonts.googleapis.com/css?family=Russo+One');
+ @import url('https://fonts.googleapis.com/css?family=Kanit');
+.capHolders{margin: 40px 0 10px; overflow: hidden;}
+.capHolders img{width: 100%; height: auto}
+.capHolders .capWrapper{background: black; opacity: 0.9; color: white}
+.capHolders h1{font-family: 'Russo One', sans-serif;font-size: 1.5em;text-align: center; text-transform: uppercase;background: white; height: 40px;line-height: 2em; margin-bottom: 20px;}
+.capHolders .purpleCarHolder h1, .capHolders .orangeCarHolder h1, .capHolders .greenCarHolder h1{font-family: 'Russo One', sans-serif;font-size: 1.7em;text-transform: uppercase;text-align: center;height: 40px;background-color: purple;padding: 0;margin: 0;line-height: 1.7em;color: white;}
+.capHolders h2{font-family: 'Kanit', sans-serif;text-transform: uppercase;font-size: 1.18em;text-align: left;padding: 0;margin: 10px 10px 3px 10px;}
+.capHolders ul{padding: 0;margin: 0 10px 0 10px;list-style-type: none;font-size: 0.8em;}
+.capHolders ul li{list-style-type: none;margin: 0 15px 0 0;padding: 0;display: block;float: left}
+/*.capHolders ul li strong{margin: 0; font-family: 'Russo One', sans-serif;}*/
+.capHolders ul li p{margin: 0;font-size: 3.5em;font-family: 'Russo One', sans-serif;color: cadetblue;line-height: 0.7em}
+.capHolders ul li span{font-family:'Kanit', sans-serif; text-transform: uppercase; font-size: 1em}
+.capWrapper .capPlayer{border-bottom: 1px solid white;}
+.nopadding {padding: 0 !important;margin: 0 !important;}
+/*.capHolders .capPlayer .contentWrap {width: 50%}*/
+.capHolders .orangeCarHolder h1{background: orange }
+.capHolders .greenCarHolder h1{background: green}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+.playerDetailWrapper{margin-top: 65px}
+.playerDetails{margin-bottom: 20px;padding:15px;background: #fff;background: rgba(255,255,255,0.9);overflow: hidden}
+.nopadding {padding: 0 !important;margin: 0 !important;}
+.playerDetails .page-header{border-bottom: 1px solid #000;}
+.playerDetails h1, .playerDetails h2, .playerDetails h3 {font-family: 'Russo One', sans-serif; text-transform: uppercase}
+.playerDetails h1{margin-top: 0}
+.playerDetails h2{background: deepskyblue;padding: 10px;text-align: center; margin-top: 0; color: white}
+.playerDetails .records h3{margin-left: 10px}
+.playerDetails strong{display: block; line-height: 0.8em; font-size: 2.5em; font-family: 'Russo One', sans-serif;}
+.playerDetails span{font-family: 'Patua One', cursive;color: deepskyblue;}
+.battingWrap, .bowlingWrap{overflow: hidden; text-transform: uppercase;}
+.playerDetails .battingWrap .col-md-2, .playerDetails .bowlingWrap .col-md-2{border-top:1px solid gray; border-right:1px solid gray; border-bottom:1px solid gray;height: 70px;padding: 12px 12px 0 5px;}
+.playerDetails .bowlingWrap .col-md-2{border-bottom:none; }
+.playerDetails .records{border: 1px solid gray; margin-top: 15px}
+.playerDetails .bowlingWrap div:last-child, .playerDetails .battingWrap div:last-child{border-right:none }

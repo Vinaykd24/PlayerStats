@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+#playerList{ position: relative;}
+#playerList .container{ padding:0; position:relative; z-index: 1; }
+#player-container h2{padding: 0;margin: 0 0 10px 0;text-align: center;color: white; font-family: 'Russo One', sans-serif;font-size: 2.5em;}
+#player-container b{font-family: 'Russo One', sans-serif; font-size: 1em; text-transform: uppercase}
+.eachplayer{ overflow:hidden; text-align:center;background:#FFF;border-radius:10px; color:#333;padding:10px; margin:10px;box-shadow: 2px 2px 21px #000; cursor: pointer; position:relative;z-index: 1; min-height: 315px;}
+.eachplayer:hover{ border: 1px solid #000;}
+.eachplayer img{width:80%;border-radius:50%;}
+.eachplayer ul{padding: 0; margin:10px 0; list-style: none;float: left;}
+.eachplayer ul li{border-bottom: 1px solid #CCC;float: left; width:100%}
+.overlaybox{background-color:#000; opacity: 0.5; height: 100%; width:100%; position:absolute; top:0;}
+.currentPlayer{margin: 20px 0 0 0}
+.playerInfo{background-color:black;padding:10px;display:flex;color: white; border-radius: 10px;}
+.playerInfo img{border-radius: 50%;width: 80%}
+.playerInfo h3{padding-bottom:5px;border-bottom:1px solid white;font-family: 'Bungee Inline', cursive;}
+

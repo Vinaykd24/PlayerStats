@@ -1,0 +1,144 @@
+import { Injectable } from '@angular/core';
+import { Http,URLSearchParams } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Injectable()
+export class PlayerService {
+  constructor(private http: Http){}
+  get(medium){
+    let serachParam = new URLSearchParams();
+    serachParam.append('medium', medium);
+    return this.http.get('Player', {search: serachParam })
+    .map(response => {
+      return response.json().Player;
+    });
+  }
+    Player = [
+  {
+    "pname": "Mayank Jasore",
+    "photo": "profile_01.jpg",
+    "player_id": "1",
+    "runScored": "963",
+    "wickets": "13",
+    "matches": "18",
+    "inn": "18",
+    "ballfaced": "541",
+    "overs": "53.00",
+    "maidens": "0",
+    "runsGiven": "261",
+    "MOM": "8"
+  },
+  {
+    "pname": "Gaurav Singh",
+    "photo": "profile_02.jpg",
+    "player_id": "2",
+    "runScored": "621",
+    "wickets": "30",
+    "matches": "21",
+    "inn": "20",
+    "ballfaced": "463",
+    "overs": "63.10",
+    "maidens": "2",
+    "runsGiven": "392",
+    "MOM": "5"
+  },
+  {
+    "pname": "Saleem Mohammad",
+    "photo": "profile_03.jpg",
+    "player_id": "3",
+    "runScored": "373",
+    "wickets": "5",
+    "matches": "21",
+    "inn": "19",
+    "ballfaced": "244",
+    "overs": "3.00",
+    "maidens": "1",
+    "runsGiven": "14",
+    "MOM": "2"
+  },
+  {
+    "pname": "Rahul Garg",
+    "photo": "profile_04.jpg",
+    "player_id": "4",
+    "runScored": "302",
+    "wickets": "24",
+    "matches": "19",
+    "inn": "17",
+    "ballfaced": "242",
+    "overs": "41.39",
+    "maidens": "0",
+    "runsGiven": "297",
+    "MOM": "1"
+  },
+  {
+    "pname": "Vikram Randhawa",
+    "photo": "profile_05.jpg",
+    "player_id": "5",
+    "runScored": "818",
+    "wickets": "0",
+    "matches": "25",
+    "inn": "24",
+    "ballfaced": "674",
+    "overs": "0.00",
+    "maidens": "0",
+    "runsGiven": "0",
+    "MOM": "3"
+  },
+  {
+    "pname": "Soumya Ranjan",
+    "photo": "profile_06.jpg",
+    "player_id": "6",
+    "runScored": "416",
+    "wickets": "7",
+    "matches": "24",
+    "inn": "20",
+    "ballfaced": "305",
+    "overs": "19.00",
+    "maidens": "0",
+    "runsGiven": "122",
+    "MOM": "2"
+  },
+  {
+    "pname": "Sunil Babar",
+    "photo": "profile_07.jpg",
+    "player_id": "7",
+    "runScored": "3",
+    "wickets": "21",
+    "matches": "18",
+    "inn": "2",
+    "ballfaced": "12",
+    "overs": "57.00",
+    "maidens": "0",
+    "runsGiven": "438",
+    "MOM": "1"
+  },
+  {
+    "pname": "Rahul Khandelwal",
+    "photo": "profile_08.jpg",
+    "player_id": "8",
+    "runScored": "11",
+    "wickets": "12",
+    "matches": "14",
+    "inn": "5",
+    "ballfaced": "13",
+    "overs": "40.79",
+    "maidens": "0",
+    "runsGiven": "293",
+    "MOM": "1"
+  },
+  {
+    "pname": "Shantanu Nadkarni",
+    "photo": "profile_09.jpg",
+    "player_id": "9",
+    "runScored": "102",
+    "wickets": "1",
+    "matches": "9",
+    "inn": "6",
+    "ballfaced": "96",
+    "overs": "2.00",
+    "maidens": "0",
+    "runsGiven": "15",
+    "MOM": "0"
+  }
+  ]
+}

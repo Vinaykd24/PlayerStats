@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Adamina');
+.aboutWrapper{margin-top: 65px; font-family: 'Adamina', serif;z-index: 12}
+.aboutWrapper h1,.aboutWrapper h2, .aboutWrapper h3{font-family: 'Adamina', serif;}
+.overlaybox{background-color:#000; opacity: 0.5; height: 100%; width:100%; position:absolute; top:0;z-index: 1}
+.box {margin-bottom: 20px;padding: 30px 15px;background: #fff;background: rgba(255,255,255,0.9);overflow: hidden}
+.intro-text {text-transform: uppercase;font-size: 1.25em;font-weight: 400;letter-spacing: 1px;}
+hr {max-width: 400px;border-color: #999999;border-width: 1px}
+.img-left {float: left;margin-right: 25px;border: #999999 solid 1px;}
+.nopadding {padding: 0 !important;}

@@ -1,0 +1,126 @@
+<div class="container formWrapper">
+  <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-default" *ngIf = "!enableSecondPanel">
+            <div class="panel-heading">Step 1 Enter Tournament Details</div>
+            <!--form 1 start -->
+            <form  [formGroup]= "tournamentDetails" novalidate (ngSubmit)="submitTournamentDetails(tournamentDetails.value)">
+              <div class="panel-body">
+                <div class="form-group">
+                  <label for="">Tournament Name</label>
+                  <input type="text" class="form-control" formControlName="tournament_name" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Ground Name</label>
+                  <input type="text" class="form-control" formControlName="match_venue" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Date and Time</label>
+                  <input type="text" class="form-control" formControlName="match_time" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Toss Won By</label>
+                  <input type="text" class="form-control" formControlName="toss" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Elected To</label>
+                  <input type="text" class="form-control" formControlName="elected_to" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Result</label>
+                  <input type="text" class="form-control" formControlName="match_result" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Run Conceded</label>
+                  <input type="text" class="form-control" formControlName="runs_conceded" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Overs Bowled</label>
+                  <input type="text" class="form-control" formControlName="overs_bowled" ngModel>
+                </div><!--div.form-group-->
+                <div class="form-group">
+                  <label for="">Man of the Match</label>
+                  <input type="text" class="form-control" formControlName="man_of_match" ngModel>
+                </div><!--div.form-group-->
+                <button type="submit" [disabled]="!tournamentDetails.valid">Submit</button>
+              </div><!-- div.panel-body Ends -->
+            </form>
+            </div><!--div.panel panel-default Ends -->
+          </div><!--div.col-md-6 Ends -->
+          <!--form 2 start -->
+          <div class="col-md-8">
+            <!--<div class="panel panel-default" *ngIf = "enableSecondPanel">-->
+            <div class="panel panel-default">
+              <form [formGroup]= "matchDetails" novalidate>
+              <div class="panel-heading">Step 2 Enter Match Details</div>
+                <div class="panel-body">
+                  <div class="playerAdd">
+                    <div class="form-group col-md-3">
+                      <label for="">Select Player</label>
+                      <Select class="form-control" formControlName="pname" ngModel ngDefaultControl>
+                        <option value=""></option>
+                        <option value="{{item.pname}}" *ngFor = "let item of allPlayerData">{{item.pname}}</option>
+                      </Select>
+                    </div><!--div.form-group-->
+                    <div class="form-group col-md-2">
+                      <label for="">Run Scored</label>
+                      <input type="text" class="form-control" formControlName="runs_scored" ngModel>
+                      <div *ngIf="runScoredController.errors">
+                        <p *ngIf = "runScoredController.errors.pattern">Invalid score</p>
+                      </div>
+                    </div><!--div.form-group-->
+                    <div class="form-group col-md-2">
+                      <label for="">Ball Faced</label>
+                      <input type="text" class="form-control" formControlName="balls_faced" ngModel>
+                    </div><!--div.form-group-->
+                    <div class="form-group col-md-2">
+                      <label for="">Overs</label>
+                      <input type="text" class="form-control" formControlName="overs" ngModel>
+                    </div><!--div.form-group-->
+                    <div class="form-group col-md-2">
+                      <label for="">Maidens</label>
+                      <input type="text" class="form-control" formControlName="maidens" ngModel>
+                    </div><!--div.form-group-->
+                    <div class="form-group col-md-2">
+                      <label for="">Runs Given</label>
+                      <input type="text" class="form-control" formControlName="runs_given" ngModel>
+                    </div><!--div.form-group-->
+                    <div class="form-group col-md-2">
+                      <label for="">Wickets</label>
+                      <input type="text" class="form-control" formControlName="wickets_taken" ngModel>
+                    </div><!--div.form-group-->
+                  </div><!--div.playerAdd Ends-->
+                  <div class="clearfix"></div>
+                  <button [hidden]="matchInfo.length === 11" (click)=submitMatchDetails(matchDetails.value)
+                  [disabled]="!matchDetails.valid">Add</button>
+                  
+                  
+                  <table class="table">
+                    <tr>
+                      <th>SR. NO</th>
+                      <th>Player Name</th>
+                      <th>Run Scored</th>
+                      <th>Ball Faced</th>
+                      <th>Overs Bowled</th>
+                      <th>Maidens</th>
+                      <th>Runks Given</th>
+                      <th>Wickets Taken</th>
+                    </tr>
+                    <tr *ngFor="let player of matchInfo; let i = index">
+                      <td>{{i+1}}</td>
+                      <td>{{player.pname}}</td>
+                      <td>{{player.runs_scored}}</td>
+                      <td>{{player.balls_faced}}</td>
+                      <td>{{player.overs}}</td>
+                      <td>{{player.maidens}}</td>
+                      <td>{{player.runs_given}}</td>
+                      <td>{{player.wickets_taken}}</td>
+                    </tr>
+                  </table>
+                  <button type="submit" [hidden]="matchInfo.length !== 11">Submit</button>
+                </div><!-- div.panel-body Ends -->
+              </form>
+            </div><!--div.panel panel-default Ends -->
+          </div><!--div.col-md-6 Ends-->
+  </div>
+</div>

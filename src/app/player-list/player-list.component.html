@@ -1,0 +1,23 @@
+<section id="playerList">
+    <div>
+        <div class="container" id="player-container">
+            <h2>Our Players</h2>
+            <div class="col-md-2 col-sm-3 eachplayer"  *ngFor="let item of playerData" (click)="selectPlayer(item)" MyPlayers>
+                <img src="assets/images/{{item.photo}}"/>
+                <div>
+                    <ul>
+                        <li class="text-center"><b>{{item.pname}}</b></li>
+                        <li><span class="pull-left">Matches</span><span class="pull-right">{{item.matches}}</span></li>
+                        <li><span class="pull-left">Innings</span><span class="pull-right">{{item.inn}}</span></li>
+                        <li><span class="pull-left">Rus Scored</span><span class="pull-right">{{item.runScored}}</span></li>
+                        <li><span class="pull-left">Wickets</span><span class="pull-right">{{item.wickets}}</span></li>
+                        <li><span class="pull-left">Batting Avg</span><span class="pull-right">{{(item.runScored/item.inn) | number:'2.1-2'}}</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    
+    <div class="overlaybox"></div>
+</section>
