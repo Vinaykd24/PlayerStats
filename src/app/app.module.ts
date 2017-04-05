@@ -18,7 +18,8 @@ import { AddDetailComponent } from './add-detail/add-detail.component';
 
 import { PlayerDetailComponent } from './player-detail/player-detail.component'
 
-import { ShareDataService } from './share-data.service'
+import { ShareDataService } from './share-data.service';
+import { MatchResultComponent } from './match-result/match-result.component'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ShareDataService } from './share-data.service'
     AboutComponent,
     AddDetailComponent,
     PlayerDetailComponent,
+    MatchResultComponent,
   ],
   imports: [
     BrowserModule,

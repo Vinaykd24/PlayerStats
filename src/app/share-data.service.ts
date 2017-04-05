@@ -5,6 +5,7 @@ export class ShareDataService {
 
   sharedData;
   allPlayerData;
+  allMatchData;
 
   constructor() { }
 
@@ -22,6 +23,9 @@ export class ShareDataService {
 
    getAllPlayerData(){
     return this.allPlayerData;
+  }
+  getMatchDetails(){
+    return this.allMatchData;
   }
 
 }

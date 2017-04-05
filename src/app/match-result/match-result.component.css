@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+.matchResults {margin-top:65px;font-family: 'Exo 2', sans-serif;}
+.matchResults .match{border: 1px solid black; background-color:black; opacity: 0.75; overflow: hidden; padding-top: 10px;color: white; border-radius: 10px;-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);box-shadow: 2px 2px 5px 0px rgba(0,0,0,.75); margin-bottom: 10px;}
+.matchResults .matchInfo {margin-bottom: 10px; text-transform: uppercase}
+.matchResults .matchInfo p {margin-bottom:5px; font-size: 0.9em }
+.finalScore {border-top: 2px solid gray;margin-top: 10px}
+.matchResults .result{padding:10px 0; background-color: darkcyan}
+.homeTeam img, .awayTeam img {float: left; margin-right: 5px;}
+.imageWrap{overflow: hidden;}
+.match .imageWrap span{word-wrap: break-word;}

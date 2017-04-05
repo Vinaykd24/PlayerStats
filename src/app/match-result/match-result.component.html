@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row matchResults">
+    <div class="col-xs-4" *ngFor="let item of matchResults">
+      <div class="match">
+        <div class="matchInfo text-center">
+          <p>{{item.match_time}}</p>
+          <p>{{item.tournament_name}}</p>
+          <p>{{item.match_venue}}</p>
+        </div>
+        <div class="col-sm-5">
+          <div class="homeTeam">
+            <div class="imageWrap">
+              <img src="./assets/images/TCS-logo-S.jpg" alt="">
+              <span>TCS</span>
+            </div>
+            <div class="finalScore">
+              <p class="text-center">{{item.wickets_lost}}/{{item.runs_scored}}</p>
+            </div><!--div.finalScore Ends -->
+          </div><!--div.homeTeam Ends -->
+        </div>
+        <div class="col-sm-2 text-center">
+          <h3>VS</h3>
+        </div>
+        <div class="col-sm-5">
+          <div class="awayTeam">
+            <div class="imageWrap">
+              <img src="./assets/images/cognizant_logo.png" alt="">
+              <span>{{item.opponent}}</span>
+            </div>
+            <div class="finalScore">
+              <p class="text-center">{{item.wickets_taken}}/{{item.runs_conceded}}</p>
+            </div><!--div.finalScore Ends -->
+          </div>
+        </div>
+        <div class="col-xs-12 result" *ngIf = "item.elected_to == 'BT'">
+          <div class="text-center">
+            <span *ngIf = "item.match_result == 'W'">TCS Won By {{item.runs_scored - item.runs_conceded}} Runs</span>
+            <span *ngIf = "item.match_result == 'L'">{{item.opponent}} Won By {{10 - item.wickets_taken}} Wickets</span>
+            <span *ngIf = "item.match_result == 'T'">Match Was Tied</span>
+            <span *ngIf = "item.match_result == 'NR'">No Result</span>
+          </div>
+        </div>
+        <div class="col-xs-12 result" *ngIf = "item.elected_to == 'BL'">
+          <div class="text-center">
+            <span *ngIf = "item.match_result == 'W'">TCS Won By {{10 - item.wickets_lost}} Wickets</span>
+            <span *ngIf = "item.match_result == 'L'">{{item.opponent}} Won By {{item.runs_conceded - item.runs_scored}} Runs</span>
+            <span *ngIf = "item.match_result == 'T'">Match Was Tied</span>
+            <span *ngIf = "item.match_result == 'NR'">No Result</span>
+          </div>
+        </div>
+      </div><!--div.match Ends-->
+    </div><!--div.col-xs-4 Ends-->
+  </div>
+</div>

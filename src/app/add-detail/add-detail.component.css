@@ -1,1 +1,4 @@
-.formWrapper{margin-top:65px;}
+@import url('https://fonts.googleapis.com/css?family=Adamina');
+.formWrapper{margin-top:65px;font-family: 'Adamina', serif;}
+.addPlayerDetails{font-size: 0.85em; margin-top: 15px;}
+.addPlayerDetails .glyphicon-remove-sign{color: darkred;}

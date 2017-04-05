@@ -13,7 +13,19 @@ export class AddDetailComponent implements OnInit {
   tournamentDetails: FormGroup;
   matchDetails: FormGroup;
   enableSecondPanel: boolean;
+  
+  /*Initialized Variables for Form Errors */
+  electedToController;
+  runsConcededController;
+  oversBowledController;
+
   runScoredController;
+  ballFacedController;
+  oversController;
+  maidensController;
+  runsGivenController;
+  wicketsTakenController;
+
   matchInfo: matchInfo[] = [];
   allPlayerData;
 
@@ -39,23 +51,32 @@ export class AddDetailComponent implements OnInit {
         match_venue: this.formBuilder.control(null, [Validators.required]),
         match_time: this.formBuilder.control(null, [Validators.required]),
         toss: this.formBuilder.control(null, [Validators.required]),
-        elected_to: this.formBuilder.control(null, [Validators.required]),
+        elected_to: this.formBuilder.control(null, [Validators.required, Validators.pattern('[A-Za-z]{1,4}')]),
         match_result: this.formBuilder.control(null, [Validators.required]),
-        runs_conceded: this.formBuilder.control(null, [Validators.required]),
-        overs_bowled: this.formBuilder.control(null, [Validators.required]),
+        runs_conceded: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,3}')]),
+        overs_bowled: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,3}')]),
         man_of_match: this.formBuilder.control(null, [Validators.required]),
 		});
     this.matchDetails = this.formBuilder.group({
       pname: this.formBuilder.control(null, [Validators.required]),
       runs_scored: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,4}')]),
-      balls_faced: this.formBuilder.control(null, [Validators.required]),
-      overs: this.formBuilder.control(null, [Validators.required]),
-      maidens: this.formBuilder.control(null, [Validators.required]),
-      runs_given: this.formBuilder.control(null, [Validators.required]),
-      wickets_taken: this.formBuilder.control(null, [Validators.required]),
+      balls_faced: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,4}')]),
+      overs: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,3}')]),
+      maidens: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,3}')]),
+      runs_given: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,4}')]),
+      wickets_taken: this.formBuilder.control(null, [Validators.required, Validators.pattern('[0-9]{1,2}')]),
     });
 
+    this.electedToController = this.tournamentDetails.get('elected_to');
+    this.runsConcededController = this.tournamentDetails.get('runs_conceded');
+    this.oversBowledController = this.tournamentDetails.get('overs_bowled');
+
     this.runScoredController = this.matchDetails.get('runs_scored');
+    this.ballFacedController = this.matchDetails.get('balls_faced');
+    this.oversController = this.matchDetails.get('overs');
+    this.maidensController = this.matchDetails.get('maidens');
+    this.runsGivenController = this.matchDetails.get('runs_given');
+    this.wicketsTakenController = this.matchDetails.get('wickets_taken');
 
   }
 
