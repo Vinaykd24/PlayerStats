@@ -18,6 +18,8 @@
               <dd>{{playerData.batting_style}}</dd> 
               <dt>Bowling Style</dt> 
               <dd>{{playerData.bowling_style}}</dd>
+              <dt>Highest Runs</dt> 
+              <dd>{{playerData.high_runs}}</dd> 
           </dl><!--div.dl-horizontal Ends-->
         </div><!--div.col-lg-9 Ends -->
       </div><!--div.row Ends -->
@@ -45,11 +47,11 @@
               </div>
               <div class="col-md-2">
                 <span>100s</span>
-                <strong>1</strong>
+                <strong>{{playerData.centuries}}</strong>
               </div>
               <div class="col-md-2">
                 <span>50s</span>
-                <strong>1</strong>
+                <strong>{{playerData.fifties}}</strong>
               </div>
             </div><!--div.battingWrap -->
             <h3>Bowling</h3>
@@ -72,11 +74,11 @@
               </div>
               <div class="col-md-2">
                 <span>3W</span>
-                <strong>1</strong>
+                <strong>{{playerData.threewkts}}</strong>
               </div>
               <div class="col-md-2">
                 <span>5W</span>
-                <strong>1</strong>
+                <strong>{{playerData.fivewkts}}</strong>
               </div>
             </div><!--div.bowlingWrap -->
         </div><!--div.records Ends -->

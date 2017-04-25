@@ -8,3 +8,4 @@
 .homeTeam img, .awayTeam img {float: left; margin-right: 5px;}
 .imageWrap{overflow: hidden;}
 .match .imageWrap span{word-wrap: break-word;}
+.matchResults .match:hover{background-color: white; color:black;cursor: pointer;}

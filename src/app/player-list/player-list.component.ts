@@ -19,6 +19,7 @@ export class PlayerListComponent  {
 	constructor(private AllPlayersService: AllPlayersService, private ShareDataService: ShareDataService, private router: Router ) {
  		this.AllPlayersService.getData().subscribe(data => {
  			this.playerData = data;
+			 console.log(data);
  		})
  	}
 

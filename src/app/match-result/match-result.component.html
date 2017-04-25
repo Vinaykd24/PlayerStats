@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <div class="row matchResults">
-    <div class="col-xs-4" *ngFor="let item of matchResults">
+    <div class="col-xs-4" *ngFor="let item of matchResults; let i = index">
       <div class="match">
         <div class="matchInfo text-center">
+          <p>Match No {{i + 1}}</p>
           <p>{{item.match_time}}</p>
           <p>{{item.tournament_name}}</p>
           <p>{{item.match_venue}}</p>
@@ -10,7 +11,7 @@
         <div class="col-sm-5">
           <div class="homeTeam">
             <div class="imageWrap">
-              <img src="./assets/images/TCS-logo-S.jpg" alt="">
+              <!--<img src="./assets/images/TCS-logo-S.jpg" alt="">-->
               <span>TCS</span>
             </div>
             <div class="finalScore">
@@ -24,7 +25,7 @@
         <div class="col-sm-5">
           <div class="awayTeam">
             <div class="imageWrap">
-              <img src="./assets/images/cognizant_logo.png" alt="">
+              <!--<img src="./assets/images/{{item.opp_logo}}" alt="">-->
               <span>{{item.opponent}}</span>
             </div>
             <div class="finalScore">
